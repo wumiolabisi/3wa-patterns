@@ -1,0 +1,9 @@
+{
+    "name": "test/builder",
+    "autoload": {
+        "psr-4": {
+            "Glace\\": "src/"
+        }
+    },
+    "require": {}
+}
