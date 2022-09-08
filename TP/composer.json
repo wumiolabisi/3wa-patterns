@@ -1,0 +1,19 @@
+{
+    "name": "test/tp",
+    "autoload": {
+        "psr-4": {
+            "Test\\Tp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Anna and Wumi"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "require": {
+        "symfony/http-foundation": "^6.1"
+    }
+}
