@@ -9,6 +9,27 @@ Le Framework que nous avons développé permet de créer une application web ave
 - Symfony HTTP Foundation : pour la gestion des variables globales HTTP
 - Symfony Routing : pour la gestion des routes
 
+# Architecture
+```php
+TP
+    public
+        index.php
+    src
+        Controller
+            AboutController.php
+            HomeController.php
+        pages
+            about.php
+            home.php
+    tests
+        IndexTest.php
+    vendor
+        toutes les librairies nécessaires
+    composer.json
+    composer.lock
+    readme.md
+```
+
 # Les routes
 Grâce au Routing Component de Symfony intégré dans ce Framework, nous avons facilité la gestion des urls dans votre application. Au départ, vous aurez deux pages par défaut : la page d'accueil "home" et la page "A propos". Ce sont des pages facultatives mais qui pourront vous servir de modèle pour construire votre app.
 

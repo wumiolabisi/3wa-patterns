@@ -17,7 +17,7 @@ $routes = require __DIR__ . '/../src/routes.php';
 $context = new RequestContext();
 $context->fromRequest($request);
 
-/* Connait toutes les routes de l'application et peut donc avec le contexte et les routes analyser les infos */
+/* Avec le contexte de la requête HTTP et les routes, analyser les infos */
 $urlMatcher = new UrlMatcher($routes, $context);
 
 $pathInfo = $request->getPathInfo();
