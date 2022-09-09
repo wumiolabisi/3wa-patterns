@@ -1,20 +1,26 @@
 # Présentation
-Le Framework que nous souhaitons développé doit permettre de gérer des routes, dispatcher
+Le Framework que nous souhaitons développé doit permettre de créer une application web avec possibilité de gérer les URLS (ou routes)
+
+## Prérequis
+- PHP 8
 
 # Les routes
 
-L'utilisateur n'a pas besoin de connaitre les pages qui existent. Grâce au PATHINFO, l'URL est analysée puis récupérée par le fichier index.php et c'est lui qui appellera la page correspondante si elle existe.
+L'utilisateur n'a pas besoin de connaitre les pages qui existent. Le Framework utilise le Routing Component de Symfony qui permet de gérer les routes facilement.
 
 ## Ajouter une nouvelle page
+Pour mon-fichier.php lié à l'url mon-app.fr/ma-page suivez les étapes : 
 1. Créez vos pages dans le dossier src/pages
-2. Dans le fichier index.php à la racine, entrez dans la variable $map le nom de votre fichier ainsi que le nom de votre route comme suit : 
+2. Dans le fichier routes.php présetn dans le dossier src, entrez le nom de votre fichier ainsi que le nom de votre route comme suit 
 
 ```php
-$map = [
-    '/ma-route-1' => 'route1.php',
-    '/ma-route-2' => 'route2.php',
-    /* etc... */
-];
+
+/* URL AVEC VARIABLE */
+$routes->add('nom-fichier', new Route('/ma-page/{var1}', ['var1' => 'valeur par défaut']));
+
+/* URL SIMPLE */
+$routes->add('nom-fichier', new Route('/ma-page'));
+
 
 ```
 
