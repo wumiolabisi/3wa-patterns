@@ -5,9 +5,10 @@ Le Framework que nous avons développé permet de créer une application web ave
 - PHP 8
 - Ce Framework se base sur les principes SOLID. Il faudra les respecter durant l'utilisation si vous souhaitez qu'il n'y ait pas de bugs insolites.
 
-## Outils
+## Outils externes inclus dans ce Framework
 - Symfony HTTP Foundation : pour la gestion des variables globales HTTP
 - Symfony Routing : pour la gestion des routes
+- PHPUnit : pour tester vos classes
 
 # Architecture
 ```php
@@ -61,8 +62,11 @@ Pour lier un *controller* à une page spécifique :
 
 $routes->add('home', new Route('/home/{name}', [
     'name' => 'World',
-    'callable' => [new \App\Controller\HomeController, 'home']
-
+    'callable' => 'App\Controller\AboutController@about'
 ]));
 
 ```
+
+# Tests
+Le framework embarque PHPUnit par défaut et est donc compatible avec cet outil de tests unitaires. Voir la documentation PHPUnit. Avec la version initiale, vous aurez accès à un fichier qui servira de template pour vos fichiers de tests. Voici une liste non exhausitve des méthodes utilisables :
+- Pour tester vos requêtes HTTP, vous pouvez utiliser l'objet Request fourni par Symfony. 

@@ -1,1 +1,1 @@
-{"version":1,"defects":[],"times":{"IndexTest::testHello":0.015}}
+{"version":1,"defects":{"IndexTest::testHome":3},"times":{"IndexTest::testHello":0.015,"IndexTest::testHome":0.015}}

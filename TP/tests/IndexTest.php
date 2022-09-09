@@ -1,17 +1,20 @@
 <?php
 
+use Framework\Moteur;
 use PHPUnit\Framework\TestCase;
+use Symfony\Component\HttpFoundation\Request;
 
 class IndexTest extends TestCase
 {
 
-    public function testHello()
+    public function testHome()
     {
-        $_GET['name'] = 'Fabien';
-        /* Verifier que c'est bien le GET->name qui s'affiche */
-        ob_start();
-        include 'index.php';
-        $content = ob_get_clean();
-        $this->assertEquals('Hello Fabien', $content);
+
+        $framework = new Moteur;
+
+        $request = Request::create('/home/Wumi');
+        $response = $framework->run($request);
+
+        $this->assertEquals('Hello', $response->getContent());
     }
 }

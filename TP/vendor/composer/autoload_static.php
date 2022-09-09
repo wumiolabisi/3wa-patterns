@@ -24,6 +24,10 @@ class ComposerStaticInitcbdaebf10b4f0cb863ecf9d717362dae
         array (
             'PhpParser\\' => 10,
         ),
+        'F' => 
+        array (
+            'Framework\\' => 10,
+        ),
         'D' => 
         array (
             'Doctrine\\Instantiator\\' => 22,
@@ -51,6 +55,10 @@ class ComposerStaticInitcbdaebf10b4f0cb863ecf9d717362dae
         'PhpParser\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
+        ),
+        'Framework\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/framework',
         ),
         'Doctrine\\Instantiator\\' => 
         array (
