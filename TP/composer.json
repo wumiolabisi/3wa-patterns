@@ -2,7 +2,8 @@
     "name": "test/tp",
     "autoload": {
         "psr-4": {
-            "Test\\Tp\\": "src/"
+            "Tp\\": "src/",
+            "Router\\": "Router/"
         }
     },
     "authors": [
