@@ -8,6 +8,7 @@ Le Framework que nous avons développé permet de créer une application web ave
 ## Outils externes inclus dans ce Framework
 - Symfony HTTP Foundation : pour la gestion des variables globales HTTP
 - Symfony Routing : pour la gestion des routes
+- Symfony Event Dispatcher
 - PHPUnit : pour tester vos classes
 
 # Architecture
@@ -30,6 +31,14 @@ TP
     composer.lock
     readme.md
 ```
+# Installation
+
+```bash
+
+git clone https://github.com/wumiolabisi/3wa-patterns.git
+
+```
+
 
 # Les routes
 Grâce au Routing Component de Symfony intégré dans ce Framework, nous avons facilité la gestion des urls dans votre application. Au départ, vous aurez deux pages par défaut : la page d'accueil "home" et la page "A propos". Ce sont des pages facultatives mais qui pourront vous servir de modèle pour construire votre app.
@@ -78,8 +87,6 @@ Soit une variable dans ma page Home qui s'appelle *name*. Par défaut, cette var
 
 /* ... */
 
-$request = Request::createFromGlobals();
-$dispatcher = new EventDispatcher;
 
 
 $dispatcher->addListener('app.request', function (RequestEvent $event) {
