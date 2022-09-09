@@ -1,5 +1,5 @@
 {
-    "name": "test/tp",
+    "name": "annaetwumi/tp",
     "autoload": {
         "psr-4": {
             "App\\": "src/",
