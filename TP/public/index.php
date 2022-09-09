@@ -31,7 +31,6 @@ try {
 
 
     $request->attributes->add($resultat);
-    var_dump($request->attributes);
     $response = call_user_func($resultat['callable'], $request);
 
 

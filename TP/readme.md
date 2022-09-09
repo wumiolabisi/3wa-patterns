@@ -1,17 +1,21 @@
 # Présentation
-Le Framework que nous souhaitons développé doit permettre de créer une application web avec possibilité de gérer les URLS (ou routes)
+Le Framework que nous avons développé permet de créer une application web avec beaucoup de facilité.
 
 ## Prérequis
 - PHP 8
+- Ce Framework se base sur les principes SOLID. Il faudra les respecter durant l'utilisation si vous souhaitez qu'il n'y ait pas de bugs insolites.
+
+## Outils
+- Symfony HTTP Foundation : pour la gestion des variables globales HTTP
+- Symfony Routing : pour la gestion des routes
 
 # Les routes
-
-L'utilisateur n'a pas besoin de connaitre les pages qui existent. Le Framework utilise le Routing Component de Symfony qui permet de gérer les routes facilement.
+Grâce au Routing Component de Symfony intégré dans ce Framework, nous avons facilité la gestion des urls dans votre application. Au départ, vous aurez deux pages par défaut : la page d'accueil "home" et la page "A propos". Ce sont des pages facultatives mais qui pourront vous servir de modèle pour construire votre app.
 
 ## Ajouter une nouvelle page
 Pour mon-fichier.php lié à l'url mon-app.fr/ma-page suivez les étapes : 
 1. Créez vos pages dans le dossier src/pages
-2. Dans le fichier routes.php présetn dans le dossier src, entrez le nom de votre fichier ainsi que le nom de votre route comme suit 
+2. Dans le fichier routes.php présent dans le dossier src, entrez le nom de votre fichier ainsi que le nom de votre route comme suit 
 
 ```php
 
@@ -24,3 +28,20 @@ $routes->add('nom-fichier', new Route('/ma-page'));
 
 ```
 
+## Ajouter de nouvelles méthodes à une page 
+En s'inspirant de Symfony, ce Framework propose d'avoir un *controller* par page, soit une classe homonyme qui gère une page unique.
+
+Pour lier un *controller* à une page spécifique :
+1. Créer votre MaPageController.php dans le dossier src/Controller et codez votre classe et ses méthodes.
+2. Rendez-vous dans le fichier routes.php qui se situe dans le dossier src
+3. Ajouter dans la variable **callable** le nom de votre controller ainsi que la méthode a exécuter :
+
+```php
+
+$routes->add('home', new Route('/home/{name}', [
+    'name' => 'World',
+    'callable' => [new \App\Controller\HomeController, 'home']
+
+]));
+
+```

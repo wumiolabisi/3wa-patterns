@@ -14,10 +14,6 @@ class ComposerStaticInitcbdaebf10b4f0cb863ecf9d717362dae
     );
 
     public static $prefixLengthsPsr4 = array (
-        'T' => 
-        array (
-            'Tp\\' => 3,
-        ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
@@ -33,13 +29,13 @@ class ComposerStaticInitcbdaebf10b4f0cb863ecf9d717362dae
             'Doctrine\\Instantiator\\' => 22,
             'DeepCopy\\' => 9,
         ),
+        'A' => 
+        array (
+            'App\\' => 4,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Tp\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src',
-        ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
@@ -63,6 +59,10 @@ class ComposerStaticInitcbdaebf10b4f0cb863ecf9d717362dae
         'DeepCopy\\' => 
         array (
             0 => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy',
+        ),
+        'App\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
         ),
     );
 
