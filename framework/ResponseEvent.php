@@ -15,7 +15,7 @@ class ResponseEvent extends Event
         $this->response = $response;
     }
 
-    public function getRequest(): Response
+    public function getResponse(): Response
     {
         return $this->response;
     }

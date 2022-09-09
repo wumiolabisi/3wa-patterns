@@ -11,7 +11,7 @@ $request = Request::createFromGlobals();
 $dispatcher = new EventDispatcher;
 
 $dispatcher->addListener('app.request', function (RequestEvent $event) {
-    $event->getRequest()->attributes->set('name', 'Wumi');
+    $event->getRequest()->attributes->set('name', 'Anna');
 });
 $framework = new Framework\Moteur($dispatcher);
 
