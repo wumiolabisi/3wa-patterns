@@ -1,3 +1,5 @@
 # ignore ALL files in ANY directory named temp
-/*/vendor/
-/*/composer.lock
+Builder/vendor/
+Builder/composer.lock
+TP/vendor/
+TP/composer.lock
